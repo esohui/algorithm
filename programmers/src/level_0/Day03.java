@@ -8,25 +8,61 @@ import java.util.HashSet;
 
 /*
  * Day 3 사칙연산, 배열, 수학
+ * - 나머지 구하기
+ * - 중앙값 구하기
  * - 최빈값 구하기
  * - 짝수는 싫어요
  */
 
-public class Exam_5 {
+public class Day03 {
 	public static void main(String[] args) {
-		Exam_5 exam = new Exam_5();
+		Day03 exam = new Day03();
 		
-		// (1) 최빈값 구하기
-		int[] array = {1, 1, 2, 3, 3, 3, 4};
-		System.out.println(exam.mode(array));
+		// (1) 나머지 구하기
+		System.out.println(exam.remainder(3, 2));
 		
-		// (2) 짝수는 싫어요
+		// (2) 중앙값 구하기
+		int[] array = {1, 2, 10, 7, 11};
+		System.out.println(exam.median(array));
+		
+		// (3) 최빈값 구하기
+		int[] array1 = {1, 1, 2, 3, 3, 3, 4};
+		System.out.println(exam.mode(array1));
+		
+		// (4) 짝수는 싫어요
 		int[] array2 = exam.oddNumber(11);
 		System.out.println(Arrays.toString(array2));
 		
 	}
 	
-	// (1) 최빈값 구하기
+	// (1) 나머지 구하기
+	public int remainder(int num1, int num2) {
+        return num1 % num2;
+    }
+	
+	// (2) 중앙값 구하기(Arrays.sort 사용)
+	public int median(int[] array) {
+		Arrays.sort(array);
+		int answer = array[array.length/2];
+        return answer;
+    }
+	
+	// (2) 중앙값 구하기
+	public int median2(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			for (int j = i+1; j < array.length; j++) {
+				if (array[j] < array[i]) {
+					int num = array[i];
+					array[i] = array[j];
+					array[j] = num;
+				}
+			}
+		}
+		int answer = array[array.length/2];
+		return answer;
+	}
+	
+	// (3) 최빈값 구하기
 	public int mode(int[] array) {
 		
 		if (array.length == 1) {
@@ -67,7 +103,7 @@ public class Exam_5 {
 		return answer;
     }
 	
-	// (2) 짝수는 싫어요
+	// (4) 짝수는 싫어요
 	public int[] oddNumber(int n) {
 		int size = n%2 == 0 ? n/2 : n/2+1;
 		int[] answer = new int[size];
@@ -80,4 +116,5 @@ public class Exam_5 {
 		}
         return answer;
 	}
+	
 }

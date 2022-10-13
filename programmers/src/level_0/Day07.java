@@ -8,9 +8,9 @@ package level_0;
  * - 짝수의 합
  */
 
-public class Exam_9 {
+public class Day07 {
 	public static void main(String[] args) {
-		Exam_9 exam = new Exam_9();
+		Day07 exam = new Day07();
 		System.out.println(exam.removeLetter("BCBdbe", "B"));
 		System.out.println(exam.protractor(89));
 		System.out.println(exam.lambSkewers(64, 6));

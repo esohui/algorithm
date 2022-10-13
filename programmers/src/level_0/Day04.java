@@ -8,9 +8,10 @@ package level_0;
  * - 배열의 평균값
  */
 
-public class Exam_6 {
+public class Day04 {
+	
 	public static void main(String[] args) {
-		Exam_6 exam = new Exam_6();
+		Day04 exam = new Day04();
 		
 		System.out.println(exam.pizza(15));
 		System.out.println(exam.pizza2(10));
@@ -19,6 +20,7 @@ public class Exam_6 {
 		int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		System.out.println(exam.average(array));
 		
+	
 	}
 	
 	// (1) 피자 나눠 먹기 (1)
@@ -73,4 +75,9 @@ public class Exam_6 {
         double answer = (double)sum/numbers.length;
         return answer;
     }
+	
+	
 }
+
+
+

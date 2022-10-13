@@ -11,9 +11,9 @@ import java.util.Scanner;
  * - 문자 반복 출력하기
  */
 
-public class Exam_8 {
+public class Day06 {
 	public static void main(String[] args) {
-		Exam_8 exam = new Exam_8();
+		Day06 exam = new Day06();
 		
 		System.out.println(exam.reverse("abcde"));
 		exam.triangle();

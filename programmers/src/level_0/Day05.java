@@ -10,9 +10,9 @@ import java.util.Arrays;
  * - 배열 뒤집기
  */
 
-public class Exam_7 {
+public class Day05 {
 	public static void main(String[] args) {
-		Exam_7 exam = new Exam_7();
+		Day05 exam = new Day05();
 		
 		System.out.println(exam.discount(999999));
 		System.out.println(Arrays.toString(exam.americano(11000)));
