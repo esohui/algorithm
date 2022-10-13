@@ -10,12 +10,13 @@ import java.util.Scanner;
  * - 짝수 홀수 개수
  * - 문자 반복 출력하기
  */
+
 public class Exam_8 {
 	public static void main(String[] args) {
 		Exam_8 exam = new Exam_8();
 		
 		System.out.println(exam.reverse("abcde"));
-//		exam.triangle(3);
+		exam.triangle();
 		int[] num_list = {1, 2, 3, 4, 5};
 		System.out.println(Arrays.toString(exam.evenOddNumber(num_list)));
 		System.out.println(exam.repeat("hello", 3));
@@ -29,7 +30,7 @@ public class Exam_8 {
     }
 	
 	// (2) 직각삼각형 출력하기
-	public void triangle(int num) {
+	public void triangle() {
 		Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
@@ -38,6 +39,7 @@ public class Exam_8 {
         	}
         	System.out.println();
         }
+       sc.close();
     }
 	
 	// (3) 짝수 홀수 개수
