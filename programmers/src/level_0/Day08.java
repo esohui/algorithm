@@ -17,6 +17,9 @@ public class Day08 {
 		int[] numbers = {1, 2, 3, 4, 5};
 		System.out.println(Arrays.toString(exam.cutArray(numbers, 1, 3)));
 		System.out.println(exam.age(100));
+		int[] emergency = {3, 76, 24};
+		System.out.println(Arrays.toString(exam.treatment(emergency)));
+		System.out.println(exam.orderedPair(20));
 	}
 	
 	// (1) 배열 자르기
@@ -35,6 +38,33 @@ public class Day08 {
         return sb.toString();
     }
 
-	// (3) 진료순서 정하기
+	// (3) 진료순서 정하기	
+	public int[] treatment(int[] emergency) {
+		int[] answer = new int[emergency.length];
+        for (int i = 0; i < emergency.length; i++) {
+        	answer[i] = 1;
+        	for (int j = 0; j < emergency.length; j++) {
+        		if (emergency[i] < emergency[j]) {
+        			answer[i] = answer[i] + 1;
+        		}
+        	}
+        }
+        return answer;
+    }
 	
+	// (4) 순서쌍의 개수
+	public int orderedPair(int n) {
+		int answer = 0;		
+		int sqrt = (int)Math.sqrt(n);
+		int	dupCnt = 0;
+		
+		for (int i = 1; i <= sqrt; i++) {
+			answer = n % i == 0 ? answer+1 : answer;
+			if (i*i == n) {
+				dupCnt++;
+				continue;
+			}
+		}
+		return (answer*2)-dupCnt;
+	}
 }
