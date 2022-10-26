@@ -1,4 +1,4 @@
-package level_0;
+package introduction;
 
 /*
  * Day 1 사칙연산 

@@ -1,4 +1,4 @@
-package level_0;
+package introduction;
 
 /*
  * Day 7 문자열, 조건문, 수학, 반복문

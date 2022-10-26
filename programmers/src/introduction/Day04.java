@@ -1,4 +1,4 @@
-package level_0;
+package introduction;
 
 /*
  * Day 4 수학, 배열
